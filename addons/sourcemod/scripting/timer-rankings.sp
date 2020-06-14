@@ -197,7 +197,7 @@ public OnPluginStart()
 	HookConVarChange(g_hGlobalMessage, OnCVarChange);
 	g_bGlobalMessage = GetConVarBool(g_hGlobalMessage);
 
-	g_hPositionMethod = AutoExecConfig_CreateConVar("timer_ranks_position_method", "1", "Determines what method will be used to determine rank positions in-game. (0 = Based on clients' total number of points, 1 = Based on the clients' current rank within the server, 2 = based on current time ranking)", FCVAR_NONE, true, 0.0, true, 2.0);
+	g_hPositionMethod = AutoExecConfig_CreateConVar("timer_ranks_position_method", "0", "Determines what method will be used to determine rank positions in-game. (0 = Based on clients' total number of points, 1 = Based on the clients' current rank within the server, 2 = based on current time ranking)", FCVAR_NONE, true, 0.0, true, 2.0);
 	HookConVarChange(g_hPositionMethod, OnCVarChange);
 	g_iPositionMethod = GetConVarInt(g_hPositionMethod);
 
